@@ -22,5 +22,6 @@ GitHubとGitLabを連携するための手順
         % cd ~/git-data/repositories/stoshiya/github-gitlab-example.git
         % mv hooks hooks.orig
         % mkdir hooks
-        % echo "exec git push --quiet github &" > hooks/post-receive"
-        % echo "exec git fetch github 'refs/heads/*:refs/heads/*' &" > hooks/pre-receive
+        % echo "exec git push --quiet github &" > hooks/post-receive
+        % echo "exec git fetch --quite github 'refs/heads/*:refs/heads/*'" > hooks/pre-receive
+        % chmod 755 hooks/post-recieve hooks/pre-recieve
